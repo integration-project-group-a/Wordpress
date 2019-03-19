@@ -42,18 +42,31 @@ namespace WrapperTest
 
         public void UpdateUser(int id, User user)
         {
+            User update = user;
+
             var client = new RestClient("http://10.3.56.25/wp-json/wp/v2/");
             client.Authenticator = new HttpBasicAuthenticator("Front-end", "Front-end");
-            var request = new RestRequest("users/3", Method.POST);
-                //request.AddUrlSegment("id", id);        
+            var request = new RestRequest("users/{id}", Method.POST);
+                request.AddUrlSegment("id", id);
 
             request.AddJsonBody(user);
 
             IRestResponse response = client.Execute(request);
-            
-            //var response = client.Post(request);
 
 
+        }
+
+        public void DeleteUser(int id)
+        {
+            var client = new RestClient("http://10.3.56.25/wp-json/wp/v2/");
+            client.Authenticator = new HttpBasicAuthenticator("Front-end", "Front-end");
+            var request = new RestRequest("users/{id}?force=true", Method.DELETE);
+            request.AddUrlSegment("id", id);
+            string json = "{" + "\"reassign\": \"1\"" + "}";
+
+            request.AddJsonBody(json);
+
+            IRestResponse response = client.Execute(request);
         }
 
     }

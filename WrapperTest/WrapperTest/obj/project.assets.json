@@ -524,12 +524,10 @@
       ]
     },
     "Microsoft.NETCore.Platforms/2.0.0": {
-      "sha512": "CCf4NjmDOoise7FAij2VPuHIgKKsu696vkTwhOkPVQfLsTmB2WLFfQ4yeO5Udtk8FD636UBMx6Y9eovzJKT76A==",
+      "sha512": "VdLJOCXhZaEMY7Hm2GKiULmn7IEPFE4XC5LPSfBVCUIA8YLZVh846gtfBJalsPQF2PlzdD7ecX7DZEulJ402ZQ==",
       "type": "package",
       "path": "microsoft.netcore.platforms/2.0.0",
       "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
         "LICENSE.TXT",
         "THIRD-PARTY-NOTICES.TXT",
         "lib/netstandard1.0/_._",
@@ -669,11 +667,10 @@
       ]
     },
     "RestSharp/106.6.9": {
-      "sha512": "/IAQTwlnlQcjlIyvelf+rhQcCRPy/r/0MftpNbff/D7PZVnmVXE4AnHk/F4NJJJEZbI4M+QTglB+xFkAyzr+9A==",
+      "sha512": "8RNSrGB8OJqkVnUno0amSL1dsTXGkqVjRvpgwhDR1cy4xhwc/6PWAJFiz6B5cnwmCB9aYMGaHrgKfTt6iMziqw==",
       "type": "package",
       "path": "restsharp/106.6.9",
       "files": [
-        ".nupkg.metadata",
         ".signature.p7s",
         "lib/net452/RestSharp.dll",
         "lib/net452/RestSharp.xml",
@@ -691,23 +688,26 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\jochen.lemaire\\.nuget\\packages\\": {},
+    "C:\\Users\\joche\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
+    "restoreSettings": {
+      "hideWarningsAndErrors": true
+    },
     "restore": {
-      "projectUniqueName": "Z:\\Int Proj\\WrapperTest\\WrapperTest\\WrapperTest\\WrapperTest.csproj",
+      "projectUniqueName": "F:\\School\\2e jaar\\Integration\\Wordpress-master\\WrapperTest\\WrapperTest\\WrapperTest.csproj",
       "projectName": "WrapperTest",
-      "projectPath": "Z:\\Int Proj\\WrapperTest\\WrapperTest\\WrapperTest\\WrapperTest.csproj",
-      "packagesPath": "C:\\Users\\jochen.lemaire\\.nuget\\packages\\",
-      "outputPath": "Z:\\Int Proj\\WrapperTest\\WrapperTest\\WrapperTest\\obj\\",
+      "projectPath": "F:\\School\\2e jaar\\Integration\\Wordpress-master\\WrapperTest\\WrapperTest\\WrapperTest.csproj",
+      "packagesPath": "C:\\Users\\joche\\.nuget\\packages\\",
+      "outputPath": "F:\\School\\2e jaar\\Integration\\Wordpress-master\\WrapperTest\\WrapperTest\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\jochen.lemaire\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\joche\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -731,15 +731,14 @@
     "frameworks": {
       "netcoreapp2.0": {
         "dependencies": {
-          "Microsoft.NETCore.App": {
-            "suppressParent": "All",
-            "target": "Package",
-            "version": "[2.0.0, )",
-            "autoReferenced": true
-          },
           "RestSharp": {
             "target": "Package",
-            "version": "[106.6.9, )"
+            "version": "106.6.9"
+          },
+          "Microsoft.NETCore.App": {
+            "target": "Package",
+            "version": "2.0.0",
+            "autoReferenced": true
           }
         },
         "imports": [

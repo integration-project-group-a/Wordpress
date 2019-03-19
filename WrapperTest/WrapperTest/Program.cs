@@ -7,17 +7,18 @@ namespace WrapperTest
     {
         static void Main(string[] args)
         {
-            var user = new User("nieuw@gmail.com");
+            var user = new User("UpdateTestSubject", "nieuw@gmail.com", "test");
 
 
             Requests getUsers = new Requests();
 
             //getUsers.AddUser(user);
 
-            getUsers.UpdateUser(3, user);
+            getUsers.UpdateUser(9, user);
 
             //getUsers.GetUsers();
 
+            //getUsers.DeleteUser(6);
 
 
             Console.WriteLine("test");

@@ -14,13 +14,22 @@ namespace WrapperTest
             this.password = password;
         }
 
-        public User(string email)
-        {
-            this.email = email;
-        }
-
         public string username { get; set; }
         public string email { get; set; }
         public string password { get; set; }
+
+        public string ToJsonString()
+        {
+            string json =
+                "{" +
+                "\"username\": " + "\"" + this.username + "\"," + 
+                "\"email\": " + "\"" + this.email + "\"," +
+                "\"password\": " + "\"" + this.password + "\"," +
+                "}";
+
+            return json;
+        }
     }
+
+    
 }

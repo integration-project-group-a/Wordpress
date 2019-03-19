@@ -16,10 +16,7 @@
       },
       "RestSharp/106.6.9": {
         "runtime": {
-          "lib/netstandard2.0/RestSharp.dll": {
-            "assemblyVersion": "106.6.9.0",
-            "fileVersion": "106.6.9.0"
-          }
+          "lib/netstandard2.0/RestSharp.dll": {}
         }
       }
     }
@@ -33,7 +30,7 @@
     "RestSharp/106.6.9": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-/IAQTwlnlQcjlIyvelf+rhQcCRPy/r/0MftpNbff/D7PZVnmVXE4AnHk/F4NJJJEZbI4M+QTglB+xFkAyzr+9A==",
+      "sha512": "sha512-8RNSrGB8OJqkVnUno0amSL1dsTXGkqVjRvpgwhDR1cy4xhwc/6PWAJFiz6B5cnwmCB9aYMGaHrgKfTt6iMziqw==",
       "path": "restsharp/106.6.9",
       "hashPath": "restsharp.106.6.9.nupkg.sha512"
     }
