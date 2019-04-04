@@ -37,10 +37,13 @@ namespace Sender
 
             request.RequestFormat = DataFormat.Json;
 
-            var resposne = client.Execute(request);
+            var response = client.Execute(request);
 
-            return resposne.ToString();
+            var content = response.Content;
 
+            //Console.WriteLine(content);
+
+            return content ;
         }
 
         public void AddUser(User user)
