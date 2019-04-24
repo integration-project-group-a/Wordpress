@@ -217,15 +217,6 @@
           "build/netstandard2.0/NETStandard.Library.targets": {}
         }
       },
-      "Newtonsoft.Json/12.0.1": {
-        "type": "package",
-        "compile": {
-          "lib/netstandard2.0/Newtonsoft.Json.dll": {}
-        },
-        "runtime": {
-          "lib/netstandard2.0/Newtonsoft.Json.dll": {}
-        }
-      },
       "RabbitMQ.Client/5.1.0": {
         "type": "package",
         "dependencies": {
@@ -253,15 +244,6 @@
         },
         "runtime": {
           "lib/netstandard1.5/RabbitMQ.Client.dll": {}
-        }
-      },
-      "RestSharp/106.6.9": {
-        "type": "package",
-        "compile": {
-          "lib/netstandard2.0/RestSharp.dll": {}
-        },
-        "runtime": {
-          "lib/netstandard2.0/RestSharp.dll": {}
         }
       },
       "runtime.debian.8-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {
@@ -1704,44 +1686,6 @@
         "netstandard.library.nuspec"
       ]
     },
-    "Newtonsoft.Json/12.0.1": {
-      "sha512": "jmVyoEyk0In8r+AObYQyFKVFm7uSRzE0XSHSbEtBJcZDMV6DqJoyB4FLcHwprPVhAh826so0db3DIKXVnpGoPA==",
-      "type": "package",
-      "path": "newtonsoft.json/12.0.1",
-      "files": [
-        ".signature.p7s",
-        "LICENSE.md",
-        "lib/net20/Newtonsoft.Json.dll",
-        "lib/net20/Newtonsoft.Json.pdb",
-        "lib/net20/Newtonsoft.Json.xml",
-        "lib/net35/Newtonsoft.Json.dll",
-        "lib/net35/Newtonsoft.Json.pdb",
-        "lib/net35/Newtonsoft.Json.xml",
-        "lib/net40/Newtonsoft.Json.dll",
-        "lib/net40/Newtonsoft.Json.pdb",
-        "lib/net40/Newtonsoft.Json.xml",
-        "lib/net45/Newtonsoft.Json.dll",
-        "lib/net45/Newtonsoft.Json.pdb",
-        "lib/net45/Newtonsoft.Json.xml",
-        "lib/netstandard1.0/Newtonsoft.Json.dll",
-        "lib/netstandard1.0/Newtonsoft.Json.pdb",
-        "lib/netstandard1.0/Newtonsoft.Json.xml",
-        "lib/netstandard1.3/Newtonsoft.Json.dll",
-        "lib/netstandard1.3/Newtonsoft.Json.pdb",
-        "lib/netstandard1.3/Newtonsoft.Json.xml",
-        "lib/netstandard2.0/Newtonsoft.Json.dll",
-        "lib/netstandard2.0/Newtonsoft.Json.pdb",
-        "lib/netstandard2.0/Newtonsoft.Json.xml",
-        "lib/portable-net40+sl5+win8+wp8+wpa81/Newtonsoft.Json.dll",
-        "lib/portable-net40+sl5+win8+wp8+wpa81/Newtonsoft.Json.pdb",
-        "lib/portable-net40+sl5+win8+wp8+wpa81/Newtonsoft.Json.xml",
-        "lib/portable-net45+win8+wp8+wpa81/Newtonsoft.Json.dll",
-        "lib/portable-net45+win8+wp8+wpa81/Newtonsoft.Json.pdb",
-        "lib/portable-net45+win8+wp8+wpa81/Newtonsoft.Json.xml",
-        "newtonsoft.json.12.0.1.nupkg.sha512",
-        "newtonsoft.json.nuspec"
-      ]
-    },
     "RabbitMQ.Client/5.1.0": {
       "sha512": "6TzFS2nlpiqKX7joVM+ViYY+rtHdYLnXkv2aNsXXJXlEbDhgf1iNBUgelPlgQUpKWoL9yUfMpTroNgEljB2HuA==",
       "type": "package",
@@ -1754,20 +1698,6 @@
         "lib/netstandard1.5/RabbitMQ.Client.xml",
         "rabbitmq.client.5.1.0.nupkg.sha512",
         "rabbitmq.client.nuspec"
-      ]
-    },
-    "RestSharp/106.6.9": {
-      "sha512": "8RNSrGB8OJqkVnUno0amSL1dsTXGkqVjRvpgwhDR1cy4xhwc/6PWAJFiz6B5cnwmCB9aYMGaHrgKfTt6iMziqw==",
-      "type": "package",
-      "path": "restsharp/106.6.9",
-      "files": [
-        ".signature.p7s",
-        "lib/net452/RestSharp.dll",
-        "lib/net452/RestSharp.xml",
-        "lib/netstandard2.0/RestSharp.dll",
-        "lib/netstandard2.0/RestSharp.xml",
-        "restsharp.106.6.9.nupkg.sha512",
-        "restsharp.nuspec"
       ]
     },
     "runtime.debian.8-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {
@@ -4253,9 +4183,7 @@
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v2.0": [
       "Microsoft.NETCore.App >= 2.0.0",
-      "Newtonsoft.Json >= 12.0.1",
-      "RabbitMQ.Client >= 5.1.0",
-      "RestSharp >= 106.6.9"
+      "RabbitMQ.Client >= 5.1.0"
     ]
   },
   "packageFolders": {
@@ -4268,11 +4196,11 @@
       "hideWarningsAndErrors": true
     },
     "restore": {
-      "projectUniqueName": "F:\\School\\2e jaar\\Integration\\Sender\\WrapperTest\\Sender.csproj",
+      "projectUniqueName": "F:\\School\\2e jaar\\Integration\\Sender\\Sender\\Sender\\Sender.csproj",
       "projectName": "Sender",
-      "projectPath": "F:\\School\\2e jaar\\Integration\\Sender\\WrapperTest\\Sender.csproj",
+      "projectPath": "F:\\School\\2e jaar\\Integration\\Sender\\Sender\\Sender\\Sender.csproj",
       "packagesPath": "C:\\Users\\joche\\.nuget\\packages\\",
-      "outputPath": "F:\\School\\2e jaar\\Integration\\Sender\\WrapperTest\\obj\\",
+      "outputPath": "F:\\School\\2e jaar\\Integration\\Sender\\Sender\\Sender\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -4302,10 +4230,6 @@
     "frameworks": {
       "netcoreapp2.0": {
         "dependencies": {
-          "RestSharp": {
-            "target": "Package",
-            "version": "106.6.9"
-          },
           "Microsoft.NETCore.App": {
             "target": "Package",
             "version": "2.0.0",
@@ -4314,10 +4238,6 @@
           "RabbitMQ.Client": {
             "target": "Package",
             "version": "5.1.0"
-          },
-          "Newtonsoft.Json": {
-            "target": "Package",
-            "version": "12.0.1"
           }
         },
         "imports": [
