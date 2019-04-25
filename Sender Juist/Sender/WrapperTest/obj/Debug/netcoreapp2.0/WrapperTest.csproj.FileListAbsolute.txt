@@ -1,0 +1,44 @@
+F:\School\2e jaar\Integration\WrapperTest\WrapperTest\bin\Debug\netcoreapp2.0\WrapperTest.deps.json
+F:\School\2e jaar\Integration\WrapperTest\WrapperTest\bin\Debug\netcoreapp2.0\WrapperTest.runtimeconfig.json
+F:\School\2e jaar\Integration\WrapperTest\WrapperTest\bin\Debug\netcoreapp2.0\WrapperTest.runtimeconfig.dev.json
+F:\School\2e jaar\Integration\WrapperTest\WrapperTest\bin\Debug\netcoreapp2.0\WrapperTest.dll
+F:\School\2e jaar\Integration\WrapperTest\WrapperTest\obj\Debug\netcoreapp2.0\WrapperTest.csprojResolveAssemblyReference.cache
+F:\School\2e jaar\Integration\WrapperTest\WrapperTest\obj\Debug\netcoreapp2.0\WrapperTest.csproj.CoreCompileInputs.cache
+F:\School\2e jaar\Integration\WrapperTest\WrapperTest\obj\Debug\netcoreapp2.0\WrapperTest.AssemblyInfoInputs.cache
+F:\School\2e jaar\Integration\WrapperTest\WrapperTest\obj\Debug\netcoreapp2.0\WrapperTest.AssemblyInfo.cs
+F:\School\2e jaar\Integration\WrapperTest\WrapperTest\bin\Debug\netcoreapp2.0\WrapperTest.pdb
+F:\School\2e jaar\Integration\WrapperTest\WrapperTest\obj\Debug\netcoreapp2.0\WrapperTest.dll
+F:\School\2e jaar\Integration\WrapperTest\WrapperTest\obj\Debug\netcoreapp2.0\WrapperTest.pdb
+Z:\Int Proj\WrapperTest\WrapperTest\WrapperTest\bin\Debug\netcoreapp2.0\WrapperTest.deps.json
+Z:\Int Proj\WrapperTest\WrapperTest\WrapperTest\bin\Debug\netcoreapp2.0\WrapperTest.runtimeconfig.json
+Z:\Int Proj\WrapperTest\WrapperTest\WrapperTest\bin\Debug\netcoreapp2.0\WrapperTest.runtimeconfig.dev.json
+Z:\Int Proj\WrapperTest\WrapperTest\WrapperTest\bin\Debug\netcoreapp2.0\WrapperTest.dll
+Z:\Int Proj\WrapperTest\WrapperTest\WrapperTest\bin\Debug\netcoreapp2.0\WrapperTest.pdb
+Z:\Int Proj\WrapperTest\WrapperTest\WrapperTest\obj\Debug\netcoreapp2.0\WrapperTest.csprojAssemblyReference.cache
+Z:\Int Proj\WrapperTest\WrapperTest\WrapperTest\obj\Debug\netcoreapp2.0\WrapperTest.csproj.CoreCompileInputs.cache
+Z:\Int Proj\WrapperTest\WrapperTest\WrapperTest\obj\Debug\netcoreapp2.0\WrapperTest.AssemblyInfoInputs.cache
+Z:\Int Proj\WrapperTest\WrapperTest\WrapperTest\obj\Debug\netcoreapp2.0\WrapperTest.AssemblyInfo.cs
+Z:\Int Proj\WrapperTest\WrapperTest\WrapperTest\obj\Debug\netcoreapp2.0\WrapperTest.dll
+Z:\Int Proj\WrapperTest\WrapperTest\WrapperTest\obj\Debug\netcoreapp2.0\WrapperTest.pdb
+F:\School\2e jaar\Integration\Wordpress-master\WrapperTest\WrapperTest\bin\Debug\netcoreapp2.0\WrapperTest.deps.json
+F:\School\2e jaar\Integration\Wordpress-master\WrapperTest\WrapperTest\bin\Debug\netcoreapp2.0\WrapperTest.runtimeconfig.json
+F:\School\2e jaar\Integration\Wordpress-master\WrapperTest\WrapperTest\bin\Debug\netcoreapp2.0\WrapperTest.runtimeconfig.dev.json
+F:\School\2e jaar\Integration\Wordpress-master\WrapperTest\WrapperTest\bin\Debug\netcoreapp2.0\WrapperTest.dll
+F:\School\2e jaar\Integration\Wordpress-master\WrapperTest\WrapperTest\bin\Debug\netcoreapp2.0\WrapperTest.pdb
+F:\School\2e jaar\Integration\Wordpress-master\WrapperTest\WrapperTest\obj\Debug\netcoreapp2.0\WrapperTest.csprojResolveAssemblyReference.cache
+F:\School\2e jaar\Integration\Wordpress-master\WrapperTest\WrapperTest\obj\Debug\netcoreapp2.0\WrapperTest.csproj.CoreCompileInputs.cache
+F:\School\2e jaar\Integration\Wordpress-master\WrapperTest\WrapperTest\obj\Debug\netcoreapp2.0\WrapperTest.AssemblyInfoInputs.cache
+F:\School\2e jaar\Integration\Wordpress-master\WrapperTest\WrapperTest\obj\Debug\netcoreapp2.0\WrapperTest.AssemblyInfo.cs
+F:\School\2e jaar\Integration\Wordpress-master\WrapperTest\WrapperTest\obj\Debug\netcoreapp2.0\WrapperTest.dll
+F:\School\2e jaar\Integration\Wordpress-master\WrapperTest\WrapperTest\obj\Debug\netcoreapp2.0\WrapperTest.pdb
+C:\Users\joche\Desktop\Wordpress-master\WrapperTest\WrapperTest\bin\Debug\netcoreapp2.0\WrapperTest.deps.json
+C:\Users\joche\Desktop\Wordpress-master\WrapperTest\WrapperTest\bin\Debug\netcoreapp2.0\WrapperTest.runtimeconfig.json
+C:\Users\joche\Desktop\Wordpress-master\WrapperTest\WrapperTest\bin\Debug\netcoreapp2.0\WrapperTest.runtimeconfig.dev.json
+C:\Users\joche\Desktop\Wordpress-master\WrapperTest\WrapperTest\bin\Debug\netcoreapp2.0\WrapperTest.dll
+C:\Users\joche\Desktop\Wordpress-master\WrapperTest\WrapperTest\bin\Debug\netcoreapp2.0\WrapperTest.pdb
+C:\Users\joche\Desktop\Wordpress-master\WrapperTest\WrapperTest\obj\Debug\netcoreapp2.0\WrapperTest.csprojResolveAssemblyReference.cache
+C:\Users\joche\Desktop\Wordpress-master\WrapperTest\WrapperTest\obj\Debug\netcoreapp2.0\WrapperTest.csproj.CoreCompileInputs.cache
+C:\Users\joche\Desktop\Wordpress-master\WrapperTest\WrapperTest\obj\Debug\netcoreapp2.0\WrapperTest.AssemblyInfoInputs.cache
+C:\Users\joche\Desktop\Wordpress-master\WrapperTest\WrapperTest\obj\Debug\netcoreapp2.0\WrapperTest.AssemblyInfo.cs
+C:\Users\joche\Desktop\Wordpress-master\WrapperTest\WrapperTest\obj\Debug\netcoreapp2.0\WrapperTest.dll
+C:\Users\joche\Desktop\Wordpress-master\WrapperTest\WrapperTest\obj\Debug\netcoreapp2.0\WrapperTest.pdb
