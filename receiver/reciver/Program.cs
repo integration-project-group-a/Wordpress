@@ -4,7 +4,6 @@ using RabbitMQ.Client.Events;
 using System.Text;
 using System.Xml;
 using Newtonsoft.Json;
-using Newtonsoft.Json.Linq;
 using System.IO;
 using System.Net;
 
@@ -32,120 +31,128 @@ class ReceiveLogs
             {
                 var body = ea.Body;
                 var message = Encoding.UTF8.GetString(body);
-                
+
                 XmlDocument doc = new XmlDocument();
                 doc.LoadXml(message);
-                
-                string jsonText = JsonConvert.SerializeXmlNode(doc,Newtonsoft.Json.Formatting.None,true);
 
-                JObject jObject = JObject.Parse(jsonText);
+                string jsonText = JsonConvert.SerializeXmlNode(doc, Newtonsoft.Json.Formatting.None, true);
+                Console.WriteLine(jsonText);
+                //request naar elasticsearch
+                var httpWebRequest = (HttpWebRequest)WebRequest.Create("http://10.3.56.26:9200/sales/_doc"); //url
+                httpWebRequest.ContentType = "application/json"; //ContentType
+                httpWebRequest.Method = "POST"; //Methode
 
-                string id = "", uuid = "", mail= "";
-                dynamic dynObj = JsonConvert.DeserializeObject(jsonText);
-                foreach (var item in dynObj.data)
+                //body
+                using (var streamWriter = new StreamWriter(httpWebRequest.GetRequestStream()))
                 {
-                   uuid= item.UUID;
-                   mail = item.email;
+                    streamWriter.Write(jsonText);
+                    streamWriter.Flush();
+                    streamWriter.Close();
                 }
 
-                HttpWebRequest httpWebRequest;
-                HttpWebResponse httpWebResponse;
-                switch ((string)jObject["header"]["description"])
+                var httpResponse = (HttpWebResponse)httpWebRequest.GetResponse(); //sending request
+                using (var streamReader = new StreamReader(httpResponse.GetResponseStream()))
                 {
-                    case "Creation of a visitor":
-
-                        httpWebRequest = (HttpWebRequest)WebRequest.Create(" http://127.0.0.1/wordpress/wp-json/integration/visitordb"); //url
-                        httpWebRequest.ContentType = "application/json"; //ContentType
-                        httpWebRequest.Method = "GET"; //Methode
-
-                        httpWebResponse = (HttpWebResponse)httpWebRequest.GetResponse(); //sending request
-                        using (var streamReader = new StreamReader(httpWebResponse.GetResponseStream()))
-                        {
-                            String result = streamReader.ReadToEnd(); //get result Json string From respons
-                            dynamic data = JObject.Parse(result);
-                            if (data.email == mail)
-                            {
-                                id = data.id;
-                            }
-                        }
-
-                        httpWebRequest = (HttpWebRequest)WebRequest.Create(" http://127.0.0.1/wordpress/wp-json/integration/visitordb/" + id); //url
-                        httpWebRequest.ContentType = "application/json"; //ContentType
-                        httpWebRequest.Method = "PUT"; //Methode
-
-                        //body
-                        using (var streamWriter = new StreamWriter(httpWebRequest.GetRequestStream()))
-                        {
-                            streamWriter.Write(jsonText);
-                            streamWriter.Flush();
-                            streamWriter.Close();
-                        }
-
-                        httpWebResponse = (HttpWebResponse)httpWebRequest.GetResponse(); //sending request
-                        using (var streamReader = new StreamReader(httpWebResponse.GetResponseStream()))
-                        {
-                            String result = streamReader.ReadToEnd(); //get result Json string From respons
-                            Console.WriteLine("result");
-                            Console.WriteLine(result);
-                        }
-                        break;
-                    case "Update of a visitor":
-                        httpWebRequest = (HttpWebRequest)WebRequest.Create(" http://127.0.0.1/wordpress/wp-json/integration/visitordb"); //url
-                        httpWebRequest.ContentType = "application/json"; //ContentType
-                        httpWebRequest.Method = "GET"; //Methode
-
-                        httpWebResponse = (HttpWebResponse)httpWebRequest.GetResponse(); //sending request
-                        using (var streamReader = new StreamReader(httpWebResponse.GetResponseStream()))
-                        {
-                            String result = streamReader.ReadToEnd(); //get result Json string From respons
-                            dynamic data = JObject.Parse(result);
-                            if (data.email == mail)
-                            {
-                                id = data.id;
-                            }
-                        }
-
-                        httpWebRequest = (HttpWebRequest)WebRequest.Create(" http://127.0.0.1/wordpress/wp-json/integration/visitordb/" + id); //url
-                        httpWebRequest.ContentType = "application/json"; //ContentType
-                        httpWebRequest.Method = "PUT"; //Methode
-
-                        //body
-                        using (var streamWriter = new StreamWriter(httpWebRequest.GetRequestStream()))
-                        {
-                            streamWriter.Write(jsonText);
-                            streamWriter.Flush();
-                            streamWriter.Close();
-                        }
-
-                        httpWebResponse = (HttpWebResponse)httpWebRequest.GetResponse(); //sending request
-                        using (var streamReader = new StreamReader(httpWebResponse.GetResponseStream()))
-                        {
-                            String result = streamReader.ReadToEnd(); //get result Json string From respons
-                            Console.WriteLine("result");
-                            Console.WriteLine(result);
-                        }
-                        Console.WriteLine("visitor update");
-                        break;
-                    case "Deletion of a visitor":
-
-                        httpWebRequest = (HttpWebRequest)WebRequest.Create("http://127.0.0.1/wordpress/wp-json/integration/visitordb/" + id); //url
-                        httpWebRequest.ContentType = "application/json"; //ContentType
-                        httpWebRequest.Method = "DELETE"; //Methode
-
-                        httpWebResponse = (HttpWebResponse)httpWebRequest.GetResponse(); //sending request
-                        using (var streamReader = new StreamReader(httpWebResponse.GetResponseStream()))
-                        {
-                            String result = streamReader.ReadToEnd(); //get result Json string From respons
-                            Console.WriteLine("result");
-                            Console.WriteLine(result);
-                        }
-                        Console.WriteLine("visitor delete");
-                        break;
+                    String result = streamReader.ReadToEnd(); //get result Json string From respons
+                    Console.WriteLine("result");
+                    Console.WriteLine(result);
                 }
+
             };
-            channel.BasicConsume(queue: queueName,autoAck: true,consumer: consumer);
+            channel.BasicConsume(queue: queueName, autoAck: true, consumer: consumer);
             Console.ReadLine();
         }
-       
+
     }
 }
+//                switch ((string)jObject["header"]["description"])
+//                {
+//                    case "Creation of a visitor":
+
+//                        httpWebRequest = (HttpWebRequest)WebRequest.Create(" http://127.0.0.1/wordpress/wp-json/integration/visitordb"); //url
+//                        httpWebRequest.ContentType = "application/json"; //ContentType
+//                        httpWebRequest.Method = "GET"; //Methode
+
+//                        httpWebResponse = (HttpWebResponse)httpWebRequest.GetResponse(); //sending request
+//                        using (var streamReader = new StreamReader(httpWebResponse.GetResponseStream()))
+//                        {
+//                            String result = streamReader.ReadToEnd(); //get result Json string From respons
+//                            dynamic data = JObject.Parse(result);
+//                        }
+
+//                        httpWebRequest = (HttpWebRequest)WebRequest.Create(" http://127.0.0.1/wordpress/wp-json/integration/visitordb/"); //url
+//                        httpWebRequest.ContentType = "application/json"; //ContentType
+//                        httpWebRequest.Method = "PUT"; //Methode
+
+//                        //body
+//                        using (var streamWriter = new StreamWriter(httpWebRequest.GetRequestStream()))
+//                        {
+//                            streamWriter.Write(jsonText);
+//                            streamWriter.Flush();
+//                            streamWriter.Close();
+//                        }
+
+//                        httpWebResponse = (HttpWebResponse)httpWebRequest.GetResponse(); //sending request
+//                        using (var streamReader = new StreamReader(httpWebResponse.GetResponseStream()))
+//                        {
+//                            String result = streamReader.ReadToEnd(); //get result Json string From respons
+//                            Console.WriteLine("result");
+//                            Console.WriteLine(result);
+//                        }
+//                        break;
+//                    case "Update of a visitor":
+//                        httpWebRequest = (HttpWebRequest)WebRequest.Create(" http://127.0.0.1/wordpress/wp-json/integration/visitordb"); //url
+//                        httpWebRequest.ContentType = "application/json"; //ContentType
+//                        httpWebRequest.Method = "GET"; //Methode
+
+//                        httpWebResponse = (HttpWebResponse)httpWebRequest.GetResponse(); //sending request
+//                        using (var streamReader = new StreamReader(httpWebResponse.GetResponseStream()))
+//                        {
+//                            String result = streamReader.ReadToEnd(); //get result Json string From respons
+//                            dynamic data = JObject.Parse(result);
+//                        }
+
+//                        httpWebRequest = (HttpWebRequest)WebRequest.Create(" http://127.0.0.1/wordpress/wp-json/integration/visitordb/"); //url
+//                        httpWebRequest.ContentType = "application/json"; //ContentType
+//                        httpWebRequest.Method = "PUT"; //Methode
+
+//                        //body
+//                        using (var streamWriter = new StreamWriter(httpWebRequest.GetRequestStream()))
+//                        {
+//                            streamWriter.Write(jsonText);
+//                            streamWriter.Flush();
+//                            streamWriter.Close();
+//                        }
+
+//                        httpWebResponse = (HttpWebResponse)httpWebRequest.GetResponse(); //sending request
+//                        using (var streamReader = new StreamReader(httpWebResponse.GetResponseStream()))
+//                        {
+//                            String result = streamReader.ReadToEnd(); //get result Json string From respons
+//                            Console.WriteLine("result");
+//                            Console.WriteLine(result);
+//                        }
+//                        Console.WriteLine("visitor update");
+//                        break;
+//                    case "Deletion of a visitor":
+
+//                        httpWebRequest = (HttpWebRequest)WebRequest.Create("http://127.0.0.1/wordpress/wp-json/integration/visitordb/"); //url
+//                        httpWebRequest.ContentType = "application/json"; //ContentType
+//                        httpWebRequest.Method = "DELETE"; //Methode
+
+//                        httpWebResponse = (HttpWebResponse)httpWebRequest.GetResponse(); //sending request
+//                        using (var streamReader = new StreamReader(httpWebResponse.GetResponseStream()))
+//                        {
+//                            String result = streamReader.ReadToEnd(); //get result Json string From respons
+//                            Console.WriteLine("result");
+//                            Console.WriteLine(result);
+//                        }
+//                        Console.WriteLine("visitor delete");
+//                        break;
+//                }
+//            };
+//            channel.BasicConsume(queue: queueName,autoAck: true,consumer: consumer);
+//            Console.ReadLine();
+//        }
+
+//    }
+//}

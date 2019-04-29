@@ -31,3 +31,14 @@ C:\Users\Jensd\Downloads\ControlRoom-master\receiver\reciver\obj\Debug\netcoreap
 C:\Users\Jensd\Downloads\ControlRoom-master\receiver\reciver\obj\Debug\netcoreapp2.2\receiver.AssemblyInfo.cs
 C:\Users\Jensd\Downloads\ControlRoom-master\receiver\reciver\obj\Debug\netcoreapp2.2\receiver.dll
 C:\Users\Jensd\Downloads\ControlRoom-master\receiver\reciver\obj\Debug\netcoreapp2.2\receiver.pdb
+C:\Users\Jensd\Downloads\receiver\reciver\bin\Debug\netcoreapp2.2\receiver.deps.json
+C:\Users\Jensd\Downloads\receiver\reciver\bin\Debug\netcoreapp2.2\receiver.runtimeconfig.json
+C:\Users\Jensd\Downloads\receiver\reciver\bin\Debug\netcoreapp2.2\receiver.runtimeconfig.dev.json
+C:\Users\Jensd\Downloads\receiver\reciver\bin\Debug\netcoreapp2.2\receiver.dll
+C:\Users\Jensd\Downloads\receiver\reciver\bin\Debug\netcoreapp2.2\receiver.pdb
+C:\Users\Jensd\Downloads\receiver\reciver\obj\Debug\netcoreapp2.2\receiver.csprojAssemblyReference.cache
+C:\Users\Jensd\Downloads\receiver\reciver\obj\Debug\netcoreapp2.2\receiver.csproj.CoreCompileInputs.cache
+C:\Users\Jensd\Downloads\receiver\reciver\obj\Debug\netcoreapp2.2\receiver.AssemblyInfoInputs.cache
+C:\Users\Jensd\Downloads\receiver\reciver\obj\Debug\netcoreapp2.2\receiver.AssemblyInfo.cs
+C:\Users\Jensd\Downloads\receiver\reciver\obj\Debug\netcoreapp2.2\receiver.dll
+C:\Users\Jensd\Downloads\receiver\reciver\obj\Debug\netcoreapp2.2\receiver.pdb

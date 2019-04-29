@@ -4536,11 +4536,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Jensd\\Downloads\\ControlRoom-master\\receiver\\reciver\\receiver.csproj",
+      "projectUniqueName": "C:\\Users\\Jensd\\Downloads\\receiver\\reciver\\receiver.csproj",
       "projectName": "receiver",
-      "projectPath": "C:\\Users\\Jensd\\Downloads\\ControlRoom-master\\receiver\\reciver\\receiver.csproj",
+      "projectPath": "C:\\Users\\Jensd\\Downloads\\receiver\\reciver\\receiver.csproj",
       "packagesPath": "C:\\Users\\Jensd\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Jensd\\Downloads\\ControlRoom-master\\receiver\\reciver\\obj\\",
+      "outputPath": "C:\\Users\\Jensd\\Downloads\\receiver\\reciver\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
